@@ -1,0 +1,220 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BWC\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-06 13:32+0000\n"
+"PO-Revision-Date: 2020-05-06 13:33+0000\n"
+"Last-Translator: katz katz\n"
+"Language-Team: Deutsch\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.3; wp-5.4.1"
+
+#: bwc.php:39
+msgid "Please active first WooCommerce plugin."
+msgstr "Bitte aktivieren Sie das WooCommerce Plugin zuerst"
+
+#: admin/options-admin-page.php:18
+msgid "Successfully Send Coupon PDF"
+msgstr "Gutschein (pdf) erfolgreich versendet"
+
+#: includes/mail.php:19 includes/mail.php:62 includes/mail.php:66
+msgid "Coupon"
+msgstr "Gutschein"
+
+#: includes/mail.php:67
+msgid "Please download the PDF"
+msgstr "Bitte laden Sie den Gutschein herunter"
+
+#: includes/mail.php:105
+msgid "Dear Ms"
+msgstr "Liebe Frau"
+
+#: includes/mail.php:107
+msgid "Dear Mr"
+msgstr "Lieber Herr"
+
+#: includes/mail.php:109
+msgid "Hi"
+msgstr "Hallo"
+
+#: includes/class-bwc-data.php:89
+msgid "Product is a coupon"
+msgstr "Produkt als Gutschein"
+
+#: includes/class-bwc-data.php:154
+msgid "Timeout after purchase"
+msgstr "Zeitüberschreitung nach Kauf"
+
+#: includes/class-bwc-data.php:156
+msgid "How long will the Coupon be valid after the customer purchase it."
+msgstr "Gutschein-Gültigkeitsdauer nach Kauf."
+
+#: includes/class-bwc-data.php:164
+msgid "Coupon incl Order No "
+msgstr "Bestellnummer mit Gutscheincode"
+
+#: includes/class-bwc-data.php:165
+msgid "Coupon Code will include the Order Number"
+msgstr "Gutscheincode mit integrierter Bestellnummer"
+
+#: includes/coupons.php:187
+msgid "Open Coupons"
+msgstr " BWC-Gutscheine öffnen"
+
+#: includes/pdf.php:94
+msgid "Customer email"
+msgstr "Kunden Email"
+
+#: includes/functions.php:35
+msgid "Donate"
+msgstr "Bitte Spenden"
+
+#: includes/functions.php:46
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/functions.php:103
+msgid "Coupons"
+msgstr "Gutscheine"
+
+#: includes/functions.php:149
+msgid "Coupon Name"
+msgstr "Gutschein Name"
+
+#: includes/functions.php:150
+msgid "Sended"
+msgstr "Gesendet"
+
+#: includes/functions.php:151
+msgid "Send Coupon email"
+msgstr "Sende Email"
+
+#: includes/functions.php:152
+msgid "Last send"
+msgstr "Zuletzt gesendet"
+
+#: includes/functions.php:153
+msgid "View PDF"
+msgstr "Vorschau"
+
+#: includes/functions.php:181
+msgid "Send"
+msgstr "Senden"
+
+#: includes/functions.php:215 includes/functions.php:385
+#: includes/functions.php:386
+msgid "Generate coupons"
+msgstr "Gutscheine erzeugen"
+
+#: includes/functions.php:218
+msgid "Generate coupon"
+msgstr "Gutschein erzeugen"
+
+#: includes/functions.php:314
+msgid "BWC - Buy Woocommerce Coupons"
+msgstr "BWC - WooCommerce Gutscheinverkauf"
+
+#: includes/functions.php:358
+msgid "Coupons generated"
+msgstr "Erzeugte Gutscheine"
+
+#: includes/functions.php:361
+msgid "Coupon generated"
+msgstr "Erzeugter Gutschein "
+
+#: admin/includes/gs-middle-options-page.php:30
+#: admin/includes/gs-middle-options-page.php:65
+msgid "Your settings have been saved."
+msgstr "Ihre Einstellungen wurden gespeichert."
+
+#: admin/includes/gs-middle-options-page.php:36
+#: admin/includes/gs-middle-options-page.php:85
+msgid "Missing input!"
+msgstr "Fehlende Eingabe."
+
+#: admin/includes/gs-middle-options-page.php:72
+msgid "Test Email has been send to "
+msgstr "Test E-Mail: erfolgreich verendet an"
+
+#: admin/includes/gs-middle-options-page.php:74
+msgid "Test Email failed to send"
+msgstr "Test E-Mail: fehlgeschlagen"
+
+#: admin/includes/gs-middle-options-page.php:119
+msgid "Basic configuration:"
+msgstr "Grundeinstellung:"
+
+#: admin/includes/gs-middle-options-page.php:125
+msgid "Generate Coupons"
+msgstr "Gutschein Generator"
+
+#: admin/includes/gs-middle-options-page.php:131
+msgid "Generate coupons mannually"
+msgstr "Erzeuge Gutscheine manuell"
+
+#: admin/includes/gs-middle-options-page.php:132
+msgid "Generate coupons automatically on complete order status"
+msgstr "Generiert Gutscheine automatisch nach Bestellstatus: Fertiggestellt "
+
+#: admin/includes/gs-middle-options-page.php:133
+msgid "Generate coupons automatically on processing order status"
+msgstr "Generiert Gutscheine automatisch nach Bestellstatus: In Bearbeitung "
+
+#: admin/includes/gs-middle-options-page.php:152
+msgid "Email configuration:"
+msgstr "E-mail Einstellungen"
+
+#: admin/includes/gs-middle-options-page.php:159
+msgid "Send copy email"
+msgstr "E-Mailkopie versenden"
+
+#: admin/includes/gs-middle-options-page.php:159
+msgid "Cc"
+msgstr "CC E-Mail Empfänger"
+
+#: admin/includes/gs-middle-options-page.php:169
+msgid "Send hidden copy email"
+msgstr "E-Mailkopie verborgen senden (CC)"
+
+#: admin/includes/gs-middle-options-page.php:169
+msgid "Bcc"
+msgstr "BCC E-Mail Empfänger"
+
+#: admin/includes/gs-middle-options-page.php:178
+msgid "Subject:"
+msgstr "Betreff"
+
+#: admin/includes/gs-middle-options-page.php:186
+msgid "Message:"
+msgstr "Nachricht:"
+
+#: admin/includes/gs-middle-options-page.php:197
+msgid "Test Mail"
+msgstr "Teste E-Mail"
+
+#: admin/includes/gs-middle-options-page.php:201
+msgid "Send test e-mail"
+msgstr "Sende Testmail"
+
+#: admin/includes/gs-middle-options-page.php:211
+msgid "Save options"
+msgstr "Speichern"
+
+#. Name of the plugin
+msgid "BW Coupon"
+msgstr "BWC Gutschein"
+
+#. Description of the plugin
+msgid ""
+"This plugin lets WooCommerce users to purchase coupons as any other product. "
+"Sellers can define coupons to be sold as any others products. Coupons may be "
+"automatically generated and delivered to customers as PDF attachments."
+msgstr ""
+"Das BCC WooCommerce plugin erlaubt es Gutscheine zu erzeugen und wie jedes "
+"andere Produkt zu verkaufen. Die Gutscheine werden automatisch als pdf-"
+"Dokument erzeugt und als E-Mail Anhang gesendet."

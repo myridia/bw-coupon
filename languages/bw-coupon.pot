@@ -1,0 +1,217 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-06 13:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: bwc.php:39
+msgid "Please active first WooCommerce plugin."
+msgstr ""
+
+#: admin/options-admin-page.php:18
+msgid "Successfully Send Coupon PDF"
+msgstr ""
+
+#: includes/mail.php:19 includes/mail.php:62 includes/mail.php:66
+msgid "Coupon"
+msgstr ""
+
+#: includes/mail.php:67
+msgid "Please download the PDF"
+msgstr ""
+
+#: includes/mail.php:105
+msgid "Dear Ms"
+msgstr ""
+
+#: includes/mail.php:107
+msgid "Dear Mr"
+msgstr ""
+
+#: includes/mail.php:109
+msgid "Hi"
+msgstr ""
+
+#: includes/class-bwc-data.php:89
+msgid "Product is a coupon"
+msgstr ""
+
+#: includes/class-bwc-data.php:154
+msgid "Timeout after purchase"
+msgstr ""
+
+#: includes/class-bwc-data.php:156
+msgid "How long will the Coupon be valid after the customer purchase it."
+msgstr ""
+
+#: includes/class-bwc-data.php:164
+msgid "Coupon incl Order No "
+msgstr ""
+
+#: includes/class-bwc-data.php:165
+msgid "Coupon Code will include the Order Number"
+msgstr ""
+
+#: includes/coupons.php:187
+msgid "Open Coupons"
+msgstr ""
+
+#: includes/pdf.php:94
+msgid "Customer email"
+msgstr ""
+
+#: includes/functions.php:35
+msgid "Donate"
+msgstr ""
+
+#: includes/functions.php:46
+msgid "Settings"
+msgstr ""
+
+#: includes/functions.php:103
+msgid "Coupons"
+msgstr ""
+
+#: includes/functions.php:149
+msgid "Coupon Name"
+msgstr ""
+
+#: includes/functions.php:150
+msgid "Sended"
+msgstr ""
+
+#: includes/functions.php:151
+msgid "Send Coupon email"
+msgstr ""
+
+#: includes/functions.php:152
+msgid "Last send"
+msgstr ""
+
+#: includes/functions.php:153
+msgid "View PDF"
+msgstr ""
+
+#: includes/functions.php:181
+msgid "Send"
+msgstr ""
+
+#: includes/functions.php:215 includes/functions.php:385
+#: includes/functions.php:386
+msgid "Generate coupons"
+msgstr ""
+
+#: includes/functions.php:218
+msgid "Generate coupon"
+msgstr ""
+
+#: includes/functions.php:314
+msgid "BWC - Buy Woocommerce Coupons"
+msgstr ""
+
+#: includes/functions.php:358
+msgid "Coupons generated"
+msgstr ""
+
+#: includes/functions.php:361
+msgid "Coupon generated"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:30
+#: admin/includes/gs-middle-options-page.php:65
+msgid "Your settings have been saved."
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:36
+#: admin/includes/gs-middle-options-page.php:85
+msgid "Missing input!"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:72
+msgid "Test Email has been send to "
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:74
+msgid "Test Email failed to send"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:119
+msgid "Basic configuration:"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:125
+msgid "Generate Coupons"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:131
+msgid "Generate coupons mannually"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:132
+msgid "Generate coupons automatically on complete order status"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:133
+msgid "Generate coupons automatically on processing order status"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:152
+msgid "Email configuration:"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:159
+msgid "Send copy email"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:159
+msgid "Cc"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:169
+msgid "Send hidden copy email"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:169
+msgid "Bcc"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:178
+msgid "Subject:"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:186
+msgid "Message:"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:197
+msgid "Test Mail"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:201
+msgid "Send test e-mail"
+msgstr ""
+
+#: admin/includes/gs-middle-options-page.php:211
+msgid "Save options"
+msgstr ""
+
+#. Name of the plugin
+msgid "BW Coupon"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This plugin lets WooCommerce users to purchase coupons as any other product. "
+"Sellers can define coupons to be sold as any others products. Coupons may be "
+"automatically generated and delivered to customers as PDF attachments."
+msgstr ""
