@@ -3,7 +3,7 @@
  * Plugin Name: BW Coupon
  * Description: This plugin lets WooCommerce customers purchase coupons as PDF ( Portable Document Format). You design the PDF with the WordPress Product HTML Editor. The Coupons are automatically generated and delivered to customers as PDF attachments 
  * Depends: WooCommerce
- * Version: 1.5.1
+ * Version: 1.5.2
  * Requires PHP: 8.0
  * Author: Myridia.com Co., LTD.
  * Author URI: https://myridia.com/bw-coupon
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ):
   exit;
 endif;
 
-define( 'BWC_VERSION', '1.5.1' );
+define( 'BWC_VERSION', '1.5.2' );
 define( 'BWC_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BWC_URL', plugin_dir_url( __FILE__ ) );
 define( 'BWC_BASENAME', plugin_basename( __FILE__ ) );
