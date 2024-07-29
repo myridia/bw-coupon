@@ -16,3 +16,16 @@ WooCommerce Seller can create PDF coupons for sale. Customer will get an attache
 Homepage: https://github.com/myridia/bw-coupon
 
 
+== Installation ==
+
+== Frequently Asked Questions ==
+
+== Screenshots ==
+
+== Changelog ==
+
+== Upgrade Notice ==
+
+== Additional Info One (Optional) ==
+
+== More Additional Info Two (Optional) ==
