@@ -15,6 +15,7 @@ WooCommerce Seller can create PDF coupons for sale. Customer will get an attache
 WooCommerce Seller can create PDF coupons for sale. Customer will get an attached PDF coupon after purchase the coupon.
 
 Homepage: https://github.com/myridia/bw-coupon
+Wordpress Pluign: https://wordpress.org/plugins/bw-coupon/
 
 ## Installation
 
