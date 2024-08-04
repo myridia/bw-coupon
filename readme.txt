@@ -15,4 +15,23 @@ WooCommerce Seller can create PDF coupons for sale. Customer will get an attache
 
 Homepage: https://github.com/myridia/bw-coupon
 
+== Installation ==
+ 
+1. Search, install and activate the bw-coupon plugin in the wordpress plugins sections
+2. You find afer the activation a menu link called BWC Settings, here you can set general setttings.
+3. When you create a new Woocomerce Product you will seee a checkbox called BWC coupon. Check this checkbox and the product will be handled as virtual coupon.
+ 
+== Frequently Asked Questions ==
+
+== Screenshots ==
+ 
+== Changelog ==
+ 
+== Upgrade Notice ==
+ 
+== Translations ==
+
+== Additional Info ==
+
+== Credits ==
 
