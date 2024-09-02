@@ -2,7 +2,7 @@ version: '3'
 
 services:
   wordpress_apache:
-    image: "veto64/apache2-php8:latest"    
+    image: "myridia/apache2-php8:latest"    
     container_name: wordpress_apache
     ports:
      - "80:80"
