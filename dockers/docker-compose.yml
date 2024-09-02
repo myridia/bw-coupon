@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  wordpress_apache:
+    image: "veto64/apache2-php8:latest"    
+    container_name: wordpress_apache
+    ports:
+     - "80:80"
+     - "443:443"     
+    volumes:
+     - "./../:/var/www/html/"     
+     - "./cert:/etc/apache2/ssl/"
+     - "./sites-enabled:/etc/apache2/sites-enabled"     
+      
+  wordpress_db:
+    image: mariadb    
+    container_name: wordpress_db
+    volumes:
+      - wordpress_db:/var/lib/mysql
+      - "./init/:/docker-entrypoint-initdb.d"
+    ports:
+     - "3306:3306"
+
+    environment:
+      MYSQL_ROOT_PASSWORD: barbarbar
+      MYSQL_USER: wordpressql1
+      MYSQL_PASSWORD: barbarbar
+      MYSQL_DATABASE: wordpressql1
+      
+  wordpress_phpmyadmin:
+    container_name: wordpress_phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "81:80"
+    environment:
+      PMA_HOST: wordpress_db
+      PMA_USER: root
+      PMA_PASSWORD: barbarbar
+
+  wordpress_ftp:
+    container_name: wordpress_ftp
+    image: hauptmedia/proftpd
+    ports:
+     - 21:21
+    environment:
+      FTP_USERNAME: wordpress_ftp
+      FTP_PASSWORD: barbarbar
+    volumes:
+      - "./../:/home/wordpress_ftp"
+
+
+volumes:
+  wordpress_db:
+
