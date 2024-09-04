@@ -1,54 +1,96 @@
-version: '3'
+version: '3.3'
 
 services:
-  wordpress_apache:
-    image: "myridia/apache2-php8:latest"    
-    container_name: wordpress_apache
-    ports:
-     - "80:80"
-     - "443:443"     
-    volumes:
-     - "./../:/var/www/html/"     
-     - "./cert:/etc/apache2/ssl/"
-     - "./sites-enabled:/etc/apache2/sites-enabled"     
-      
-  wordpress_db:
-    image: mariadb    
-    container_name: wordpress_db
-    volumes:
-      - wordpress_db:/var/lib/mysql
-      - "./init/:/docker-entrypoint-initdb.d"
-    ports:
-     - "3306:3306"
+   wordpress_main:
+     image: wordpress:latest
+     container_name: wordpress_main
+     depends_on:
+       - wordpress_db
+     volumes:
+       - wordpress_files:/var/www/html
+     ports:
+       - "80:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: wordpress_db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: PassPass123#
+       WORDPRESS_DB_NAME: wordpress
+     networks:
+       workgroup:
+         ipv4_address: "10.5.0.2"
+          
+   wordpress_db:
+     container_name: wordpress_db     
+     image: mariadb
+     volumes:
+       - db_data:/var/lib/mysql
+       - "./init/:/docker-entrypoint-initdb.d"       
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: PassPass123#
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: PassPass123#
+     networks:
+       workgroup:
+         ipv4_address: "10.5.0.3"
 
-    environment:
-      MYSQL_ROOT_PASSWORD: barbarbar
-      MYSQL_USER: wordpressql1
-      MYSQL_PASSWORD: barbarbar
-      MYSQL_DATABASE: wordpressql1
-      
-  wordpress_phpmyadmin:
-    container_name: wordpress_phpmyadmin
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - "81:80"
-    environment:
-      PMA_HOST: wordpress_db
-      PMA_USER: root
-      PMA_PASSWORD: barbarbar
+   wordpress_phpmyadmin:
+     container_name: wordpress_phpmyadmin
+     image: phpmyadmin/phpmyadmin
+     ports:
+       - "81:80"
+     environment:
+       PMA_HOST: wordpress_db
+       PMA_USER: wordpress
+       PMA_PASSWORD: PassPass123#
+     networks:
+       workgroup:
+           ipv4_address: "10.5.0.4"      
+          
+   wordpress_ftp:
+     container_name: wordpress_ftp
+     image: hauptmedia/proftpd
+     ports:
+      - 21:21
+     environment:
+       FTP_USERNAME: wordpress_ftp
+       FTP_PASSWORD: PassPass123#
+     volumes:
+       - "./../:/home/wordpress_ftp"
+     networks:
+       workgroup:
+           ipv4_address: "10.5.0.5"
+          
+   wordpress_runner:
+     container_name: wordpress_runner
+     image: wordpress:cli
+     depends_on:
+       - wordpress_main
+       - wordpress_db
+       - wordpress_phpmyadmin
+       - wordpress_ftp              
+     volumes:
+       - "./../:/var/www/html"
+       - ./script.sh:/script.sh
+     networks:
+       workgroup:
+          ipv4_address: "10.5.0.6"
+     entrypoint: ["/bin/bash", "/script.sh"] 
 
-  wordpress_ftp:
-    container_name: wordpress_ftp
-    image: hauptmedia/proftpd
-    ports:
-     - 21:21
-    environment:
-      FTP_USERNAME: wordpress_ftp
-      FTP_PASSWORD: barbarbar
-    volumes:
-      - "./../:/home/wordpress_ftp"
 
 
+       
 volumes:
-  wordpress_db:
+    wordpress_files:
+    db_data:
 
+networks:
+  workgroup:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1
+      
