@@ -1,4 +1,5 @@
 # Wordpress Plugin - ignore core
 
 *.log
+wordpress_files
 

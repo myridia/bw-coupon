@@ -7,10 +7,9 @@ services:
      depends_on:
        - wordpress_db
      volumes:
-       - wordpress_files:/var/www/html
+       - ./wordpress_files:/var/www/html       
      ports:
        - "80:80"
-     restart: always
      environment:
        WORDPRESS_DB_HOST: wordpress_db:3306
        WORDPRESS_DB_USER: wordpress
@@ -26,12 +25,12 @@ services:
      volumes:
        - db_data:/var/lib/mysql
        - "./init/:/docker-entrypoint-initdb.d"       
-     restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: PassPass123#
-       MYSQL_DATABASE: wordpress
+       MYSQL_DATABASE: wordpress       
        MYSQL_USER: wordpress
-       MYSQL_PASSWORD: PassPass123#
+       MYSQL_PASSWORD: PassPass123#       
+       MYSQL_ROOT_PASSWORD: PassPass123#
+
      networks:
        workgroup:
          ipv4_address: "10.5.0.3"
@@ -66,14 +65,17 @@ services:
    wordpress_runner:
      container_name: wordpress_runner
      image: wordpress:cli
+     user: "${UID}:${GID}"
      depends_on:
        - wordpress_main
        - wordpress_db
-       - wordpress_phpmyadmin
-       - wordpress_ftp              
+     environment:
+       WORDPRESS_DB_HOST: wordpress_db:3306
+       WORDPRESS_DB_NAME: wordpress              
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: PassPass123#
      volumes:
-       - wordpress_files:/var/www/html       
-       #- "./../:/var/www/html"
+       - ./wordpress_files:/var/www/html              
        - ./script.sh:/script.sh
      networks:
        workgroup:
