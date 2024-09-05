@@ -72,7 +72,8 @@ services:
        - wordpress_phpmyadmin
        - wordpress_ftp              
      volumes:
-       - "./../:/var/www/html"
+       - wordpress_files:/var/www/html       
+       #- "./../:/var/www/html"
        - ./script.sh:/script.sh
      networks:
        workgroup:
