@@ -14,14 +14,20 @@ while ! mysqladmin ping -h"$DB_HOST" --silent; do
    sleep 1
 done
 
-wp plugin install woocommerce --activate --allow-root
-wp plugin install bw-coupon --activate --allow-root
-wp plugin install wordpress-importer --activate --allow-root
-wp theme install starter-shop --activate --allow-root 
+#wp plugin install woocommerce --activate --allow-root
+#wp plugin install bw-coupon --activate --allow-root
+#wp plugin install wordpress-importer --activate --allow-root
+#wp theme install starter-shop --activate --allow-root 
+
+
+#wp wc payment_gateway update cheque --enabled=true --user=1 --allow-root
+#wp wc product_cat create --name=Coupons  --user=1 --allow-root
+
+wp wc import-csv p.csv --mappings=map.csv --user=1 --allow-root
 
 #wp wc product list --user=1 --allow-root
-wp wc payment_gateway update cheque --user=1 --enabled=true --allow-root
-wp import wp-content/plugins/woocommerce/sample-data/sample_products.xml --authors=skip --quiet --allow-root
+
+#wp import wp-content/plugins/woocommerce/sample-data/sample_products.xml --authors=skip --quiet --allow-root
 #wp import  wc-products.csv --authors=skip --quiet --allow-root
 #ping 10.5.0.3
 
