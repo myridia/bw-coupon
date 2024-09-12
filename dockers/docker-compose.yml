@@ -1,0 +1,99 @@
+version: '3.3'
+
+services:
+   wordpress_main:
+     image: wordpress:latest
+     container_name: wordpress_main
+     depends_on:
+       - wordpress_db
+     volumes:
+       - ./wordpress_files:/var/www/html       
+     ports:
+       - "80:80"
+     environment:
+       WORDPRESS_DB_HOST: wordpress_db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: PassPass123#
+       WORDPRESS_DB_NAME: wordpress
+     networks:
+       workgroup:
+         ipv4_address: "10.5.0.2"
+          
+   wordpress_db:
+     container_name: wordpress_db     
+     image: mariadb
+     volumes:
+       - db_data:/var/lib/mysql
+       - "./init/:/docker-entrypoint-initdb.d"       
+     environment:
+       MYSQL_DATABASE: wordpress       
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: PassPass123#       
+       MYSQL_ROOT_PASSWORD: PassPass123#
+
+     networks:
+       workgroup:
+         ipv4_address: "10.5.0.3"
+
+   wordpress_phpmyadmin:
+     container_name: wordpress_phpmyadmin
+     image: phpmyadmin/phpmyadmin
+     ports:
+       - "81:80"
+     environment:
+       PMA_HOST: wordpress_db
+       PMA_USER: wordpress
+       PMA_PASSWORD: PassPass123#
+     networks:
+       workgroup:
+           ipv4_address: "10.5.0.4"      
+          
+   wordpress_ftp:
+     container_name: wordpress_ftp
+     image: hauptmedia/proftpd
+     ports:
+      - 21:21
+     environment:
+       FTP_USERNAME: wordpress_ftp
+       FTP_PASSWORD: PassPass123#
+     volumes:
+       - "./../:/home/wordpress_ftp"
+     networks:
+       workgroup:
+           ipv4_address: "10.5.0.5"
+          
+   wordpress_runner:
+     container_name: wordpress_runner
+     image: wordpress:cli
+     user: "${UID}:${GID}"
+     depends_on:
+       - wordpress_main
+       - wordpress_db
+     environment:
+       WORDPRESS_DB_HOST: wordpress_db:3306
+       WORDPRESS_DB_NAME: wordpress              
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: PassPass123#
+     volumes:
+       - ./wordpress_files:/var/www/html              
+       - ./script.sh:/script.sh
+     networks:
+       workgroup:
+          ipv4_address: "10.5.0.6"
+     entrypoint: ["/bin/bash", "/script.sh"] 
+
+
+
+       
+volumes:
+    wordpress_files:
+    db_data:
+
+networks:
+  workgroup:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1
+      
