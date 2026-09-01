@@ -1,3 +1,4 @@
+<img src="bw-coupon.svg" alt="bw-coupon" width="120">
 # BW Coupon
 
 **Contributors:** veto \
